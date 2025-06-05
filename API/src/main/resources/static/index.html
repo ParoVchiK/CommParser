@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org">
+<body>
+<div class="container my-2" align="center">
+
+    <h3>Comments List</h3>
+    <table style="width:80%" border="1"
+           class = "table table-striped table-responsive-md">
+        <thead>
+        <tr>
+            <th>Comment</th>
+            <th>Votes</th>
+            <th>ID</th>
+        </tr>
+        <tr th:each="comm : ${comms}">
+            <td th:text="${comm.msg_text}">Message</td>
+            <td th:text="${comm.votes}">10</td>
+            <td th:text="${comm.commentable_id}">123</td>
+        </tr>
+        </thead>
+        <tbody>
+    </table>
+</div>
+</body>
+</html>
